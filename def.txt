@@ -1,0 +1,90 @@
+postgre is the engine and sql is the query language
+
+it's open source
+
+and object relation db management system 
+
+connect to the db using the gui client or the cmd
+
+data grip  is one of the client database 
+we can connect to any of our db ( we use the ssh to a remote server )
+
+Postico also but it's free 
+PgAdmin also it's free for client db
+
+when we open the psql shell 
+the server that will be displayed on the screen is the url of the server
+that we want to connect to
+
+create database test;
+
+\l : list all db in our localhost 
+
+psql -h - localhost ( if we want to ssh to a remote server we must put the 
+ulr of the server) -p 5432 -U yessine test ( name of db)
+
+\c test : to connect to the new db ( test )
+
+DROP DATABASE test; ( to delete it)
+
+\d : list of tables
+
+\d ( describe) name_of_table : extra infos about the table
+
+BIGSERIAL : auto increment number ( eight byte integer )
+
+insert into person ( list of columns ) values ( ' for string' );
+
+----------------------------------------------------------------
+
+
+generate rows with mockaroo !!!!!!!
+
+when we use the psql using the localhost 
+it will use another username not the username
+of our pc
+
+so we must put our file in the public username
+to make the file accessible for our users
+
+\i 'C:/Users/Public/person.sql'
+
+
+----------------------------------------------------------------
+
+select * from person order by id desc ;
+select * from person order by id , country desc ;
+select * from person order by id , country desc where country = 'United States' and country = 'United States';
+
+select * from person limit 10 ;
+
+select * from person offset 5 limit 5 ;
+( from 5 to 10)
+
+select * from person offset 5 ;; 
+( will select all starting from 5)
+
+----------------------------------------------------------------
+
+select * from person where country IN ("china" , "Brazil") ;
+
+select * from person where email LIKE '%@google%' ;
+
+____ : 4 chars in LIKE
+
+----------------------------------------------------------------
+
+select DISTINCT country from person;
+
+
+------------------------------------------
+
+select country , count(*) from person group by country;
+
+
+----------------------------------------------------------------
+
+select country , count(*) from person group by country  having count(*) > 5 order by country 
+
+
+

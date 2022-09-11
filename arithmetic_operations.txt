@@ -1,0 +1,12 @@
+we can operate some arithmetic operations
+in PostgreSQL
+
+like: 
+
+SELECT 5!;
+SELECT 5 - 2 ;
+
+select price , model , ROUND(price * 0.1 , 2) from car ;
+( will round the number into two numbers after common)
+
+

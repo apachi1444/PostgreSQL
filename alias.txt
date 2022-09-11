@@ -1,0 +1,2 @@
+select price as PriceHaha from person ; 
+( this is alias)
