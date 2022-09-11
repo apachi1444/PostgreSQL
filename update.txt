@@ -1,0 +1,2 @@
+update person set email="eyssine" where id =2001;
+update person set email="eyssine" , last_name="jaoua"  where id =2001;

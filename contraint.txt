@@ -1,0 +1,32 @@
+alter table person drop constraint name_of_constraint;
+
+alter table person add primary key (id) ;
+// this is the name of column that we 
+// want to make it as primary key
+
+------------------------------------------------------------------------------------------------
+
+Unique constraint 
+
+alter table person add constraint unique_email UNIQUE(email) ;
+
+------------------------------------------------------------------------------------------------
+
+check constraint
+alter table person add constraint gender_constraint check ( gender == 'Female' OR gender == 'Male') ;
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+on conflict useful only if the column 
+has already a constraint ( unique or primary key)
+
+on conflict ( id ) do nothing 
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+insert into person( id , first_name , last_name ) values ( 2017 , "yessine" , "jaoua") 
+on conflict ( id ) do update set email = EXCLUDED.email ;
+
+// the first email is the one who already exist on the row 
+// excluded.email is the new email that the user updates
