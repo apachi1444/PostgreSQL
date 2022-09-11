@@ -1,0 +1,11 @@
+inner join : depending on the foreing key 
+
+select * from person JOIN Car where person.car_id = car.id;
+
+----------------------------------------------------------------
+
+LEFT JOIN : will display the corresponding result 
+the common between them and non the common between them
+on the left table 
+
+select * from person LEFT JOIN CAR ON person.car_id = car.id;

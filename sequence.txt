@@ -1,0 +1,9 @@
+select * from person_id_sequence;
+
+will give us the last id on the table person
+
+to increment the id by default 
+
+select nextval('person_id_sequence'::regclass);
+
+alter sequence person_id_sequence restart with 10 ;

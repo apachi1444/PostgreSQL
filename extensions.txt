@@ -1,0 +1,11 @@
+functions that can affect our db;
+
+and we have to install that extension into
+our server
+
+create extension if not exists "uuid-ossp";
+
+
+\df list of functions available in that extension
+
+select * from pg_available_extensions;

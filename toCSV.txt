@@ -1,0 +1,1 @@
+\copy ( select * from person left join car on car.id = person.car_id) to 'C:/Users/Public/haha.csv' DELIMITER ',' CSV Header;

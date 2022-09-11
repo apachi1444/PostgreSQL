@@ -20,6 +20,11 @@ create database test;
 
 \l : list all db in our localhost 
 
+
+
+\x : to display in a nice way
+
+
 psql -h - localhost ( if we want to ssh to a remote server we must put the 
 ulr of the server) -p 5432 -U yessine test ( name of db)
 
