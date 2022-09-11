@@ -1,0 +1,13 @@
+select now()::date;
+select now()::time;
+
+select now() - INTERVAL '10 minutes';
+
+select (now() - INTERVAL '10 minutes) :: Date;
+
+select extract ( year from now())
+
+
+----------------------------------------------------------------
+
+select date_of_birth , Age(Now() - date_of_birth) from person ;

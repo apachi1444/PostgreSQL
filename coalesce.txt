@@ -1,0 +1,6 @@
+this aggregate function help us 
+to change value of a row of a 
+specific column if she doesn't contain
+a default value 
+
+select coalesce(email , "email not provided") from person ;
