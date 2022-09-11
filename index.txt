@@ -1,0 +1,23 @@
+indexing is like a datastructure in the top of the db 
+which allow us to do a search in the db 
+using the b+ tree 
+
+
+in postgresql 
+explain analyze our_query 
+=> will told you how much it takes 
+to make this query
+
+when we use select name from person where id ..
+
+it will use the heap because the name doesn't exist on the index data structure
+it will take us too much time to make this query
+
+index in a ds != table in another ds 
+
+
+if we specify the where condition not using the index 
+ds we should analyze the full table line by line
+
+create index person_name on person(first_name);
+it will create a b-tree in the first_name column
